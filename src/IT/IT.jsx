@@ -2,7 +2,7 @@ import React from 'react'
 
 const IT = () => {
   return (
-    <div>IT</div>
+    <div>ITTTTTTT</div>
   )
 }
 
