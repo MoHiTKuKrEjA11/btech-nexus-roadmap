@@ -16,7 +16,7 @@ function DeveloperDetail() {
 
   return (
     <div>
-      <h2>{name2}</h2>
+      <div className="text-xl mb-6 font-bold">{name2}</div>
       <p>{DevDetails[name2]}</p>
     </div>
   );

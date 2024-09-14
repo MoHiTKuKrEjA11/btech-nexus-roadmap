@@ -8,19 +8,19 @@ import CS from './ComputerScience/CS';
  
 function FieldDetail() {
   const { name } = useParams();
-
+  let str = name;
+  let noSpaces = str.replace(/\s+/g, '');
   const fieldDetails = {
-    EC: <EC/>,
+    ElectronicsandCommunication: <EC/>,
     IT: <IT/>,
     Mechanical: <Mechanical/>,
     Civil: <Civil/>,
-    CS: <CS/>,
+    ComputerScience: <CS/>,
   };
 
   return (
     <div>
-      <h2>{name} Engineering</h2>
-      <p>{fieldDetails[name]}</p>
+      <p>{fieldDetails[noSpaces]}</p>
     </div>
   );
 }
