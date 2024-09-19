@@ -1,114 +1,154 @@
-import React from 'react'
-
+import React, { useState } from 'react';
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/ui/avatar"
 const IOSD = () => {
+  const [activeBox, setActiveBox] = useState(null); // State to track the clicked box
+
+  const handleBoxClick = (index) => {
+    setActiveBox(activeBox === index ? null : index); // Toggle the clicked box
+  };
+
+  // Array of steps for iOS Development
+  const steps = [
+    {
+      id: 1,
+      title: 'Step 1: Choose an IDE',
+      imgSrc: "https://github.com/shadcn.png",
+      description: `Choose an IDE for building applications that combines common developer tools into a single graphical user interface (GUI).`,
+      resources: [
+        'Xcode (More Preferable)',
+        'Code Runner 2',
+        'Atom',
+        'AppCode',
+        'Visual Studio',
+      ],
+    },
+    {
+      id: 2,
+      title: 'Step 2: Choose a Programming Language',
+      imgSrc: "https://github.com/shadcn.png",
+      description: `Select one of the following programming languages to start developing iOS applications.`,
+      resources: ['Swift (More Preferable)', 'Objective-C'],
+    },
+    {
+      id: 3,
+      title: 'Step 3: Learn a UI Framework',
+      imgSrc: "https://github.com/shadcn.png",
+      description: `A user interface (UI) framework is essential for designing the visual elements of your app.`,
+      resources: ['SwiftUI (More Preferable)', 'UIKit', 'Storyboards'],
+    },
+    {
+      id: 4,
+      title: 'Step 4: Understand Design Patterns',
+      imgSrc: "https://github.com/shadcn.png",
+      description: `Learn design patterns to make changes easier to implement and maintain.`,
+      resources: ['MVC (Model-View-Controller) (More Preferable)', 'MVVM', 'VIPER'],
+    },
+    {
+      id: 5,
+      title: 'Step 5: Learn Git and GitHub',
+      imgSrc: "https://github.com/shadcn.png",
+      description: `Understanding version control is crucial for collaborating with other developers and managing your codebase effectively.`,
+      resources: ['Track changes in your code', 'GitHub, GitLab, Bitbucket'],
+    },
+    {
+      id: 6,
+      title: 'Step 6: Learn About iOS App Architecture',
+      imgSrc: "https://github.com/shadcn.png",
+      description: `App architecture defines how different parts of the app interact, manage data, handle user input, and communicate with external services.`,
+      resources: ['MVC', 'MVVM', 'VIPER'],
+    },
+    {
+      id: 7,
+      title: 'Step 7: Explore Networking and Data Management',
+      imgSrc: "https://github.com/shadcn.png",
+      description: `Learn how to handle network requests using libraries like URLSession or Alamofire.`,
+      resources: ['Core Data', 'SQLite', 'Realm'],
+    },
+    {
+      id: 8,
+      title: 'Step 8: Master Debugging and Testing',
+      imgSrc: "https://github.com/shadcn.png",
+      description: `Learn how to use Xcode's debugging tools and get hands-on with unit testing using XCTest and UI testing with XCUITest.`,
+      resources: [],
+    },
+    {
+      id: 9,
+      title: 'Step 9: Understand App Deployment',
+      imgSrc: "https://github.com/shadcn.png",
+      description: `Learn how to configure app settings, manage certificates, and submit it to the App Store.`,
+      resources: [],
+    },
+    {
+      id: 10,
+      title: 'Step 10: Build Real Projects and a Portfolio',
+      imgSrc: "https://github.com/shadcn.png",
+      description: `Start with small projects to understand the basics, and gradually move to more complex projects.`,
+      resources: [],
+    },
+  ];
+
   return (
-   <>
-  <div className="p-6 space-y-4">
-    <div className="text-lg mb-4">
-      iOS development involves creating applications for Apple's iOS operating system, which powers iPhones and iPads. Developers use programming languages like Swift (preferred) or Objective-C and work with Xcode, Apple's integrated development environment (IDE), to build iOS apps.
-    </div>
-
-    <div className="text-xl font-semibold mb-4">
-      Steps to Become an iOS Developer:
-    </div>
-
-    <div className="px-4"> {/* Added padding here */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-8 cursor-pointer">
-        {/* Step 1 */}
-        <div className="p-4 border border-gray-300 rounded-md bg-white shadow-md transition-transform duration-300 ease-in-out hover:shadow-lg hover:bg-violet-100">
-          <h2 className="text-lg font-bold">Step 1: Choose an IDE</h2>
-          <p>Choose an IDE for building applications that combines common developer tools into a single graphical user interface (GUI). Some of the popular IDEs are:<br />
-             1: Xcode (More Preferable) <br />
-             2: Code Runner 2 <br />
-             3: Atom <br />
-             4: AppCode <br />
-             5: Visual Studio
-          </p>
+    <>
+      <div className="p-6 space-y-4">
+        <div className="mb-4 text-lg">
+          iOS development involves creating applications for Apple's iOS operating system, which powers iPhones and iPads. Developers use programming languages like Swift (preferred) or Objective-C and work with Xcode, Apple's integrated development environment (IDE), to build iOS apps.
         </div>
 
-        {/* Step 2 */}
-        <div className="p-4 border border-gray-300 rounded-md bg-white shadow-md transition-colors duration-300 ease-in-out hover:bg-violet-200">
-          <h2 className="text-lg font-bold">Step 2: Choose a Programming Language</h2>
-          <p>Select one of the following programming languages to start developing iOS applications:<br />
-             1: Swift (More Preferable) <br />
-             2: Objective-C
-          </p>
+        <div className="mb-4 text-xl font-semibold">
+          Steps to Become an iOS Developer:
         </div>
 
-        {/* Step 3 */}
-        <div className="p-4 border border-gray-300 rounded-md bg-white shadow-md transition-colors duration-300 ease-in-out hover:bg-violet-200">
-          <h2 className="text-lg font-bold">Step 3: Learn a UI Framework</h2>
-          <p>A user interface (UI) framework is essential for designing the visual elements of your app. Some popular frameworks are:<br />
-             1: SwiftUI (More Preferable) <br />
-             2: UIKit <br />
-             3: Storyboards
-          </p>
+        {/* Steps Grid */}
+        <div className="grid grid-cols-1 gap-8 cursor-pointer sm:grid-cols-2 md:grid-cols-3">
+          {steps.map((step) => (
+            <div
+              key={step.id}
+              onClick={() => handleBoxClick(step.id)}
+              className={`p-4 border border-gray-300 rounded-md bg-white shadow-md transition-all duration-300 ease-in-out cursor-pointer hover:bg-violet-100`}
+            >
+              <h2 className="text-lg font-bold">{step.title}</h2>
+
+              {/* Description always visible */}
+              <Avatar className={` items-center justify-center m-auto w-[100px] h-[100px] transition-all duration-300 ease-in-out ${activeBox === step.id ? 'max-h-0 opacity-0' : 'max-h-screen opacity-100'}`}>
+                <AvatarImage src={step.imgSrc} alt="@shadcn" />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
+
+              {/* Additional content revealed when box is clicked */}
+              <div
+                className={`transition-all duration-300 ease-in-out ${
+                  activeBox === step.id ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+                }`}
+              >
+                {activeBox === step.id && (
+                  <div>
+                    <p>{step.description}</p>
+                    {step.resources.length > 0 && (
+                      <ul className="mt-2">
+                        {step.resources.map((resource) => (
+                          <li key={step.id} className="text-gray-600">
+                            {resource}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* Step 4 */}
-        <div className="p-4 border border-gray-300 rounded-md bg-white shadow-md transition-colors duration-300 ease-in-out hover:bg-violet-200">
-          <h2 className="text-lg font-bold">Step 4: Understand Design Patterns</h2>
-          <p>Learn design patterns to make changes easier to implement and maintain. Important design patterns for iOS development include:<br />
-             1: MVC (Model-View-Controller) (More Preferable) <br />
-             2: MVVM (Model-View-ViewModel) <br />
-             3: VIPER
-          </p>
-        </div>
-
-        {/* Step 5 */}
-        <div className="p-4 border border-gray-300 rounded-md bg-white shadow-md transition-colors duration-300 ease-in-out hover:bg-violet-200">
-          <h2 className="text-lg font-bold">Step 5: Learn Git and GitHub</h2>
-          <p>Understanding version control is crucial for collaborating with other developers and managing your codebase effectively. Learn the basics of Git:<br />
-             - Track changes in your code<br />
-             - Understand common commands: init, clone, commit, push, pull, and branch<br />
-             - Use platforms like GitHub, GitLab, or Bitbucket for collaboration
-          </p>
-        </div>
-
-        {/* Step 6 */}
-        <div className="p-4 border border-gray-300 rounded-md bg-white shadow-md transition-colors duration-300 ease-in-out hover:bg-violet-200">
-          <h2 className="text-lg font-bold">Step 6: Learn About iOS App Architecture</h2>
-          <p>App architecture defines how different parts of the app interact, manage data, handle user input, and communicate with external services. Major architectures to learn include:<br />
-             1: MVC (Model-View-Controller) <br />
-             2: MVVM (Model-View-ViewModel) <br />
-             3: VIPER
-          </p>
-        </div>
-
-        {/* Step 7 */}
-        <div className="p-4 border border-gray-300 rounded-md bg-white shadow-md transition-colors duration-300 ease-in-out hover:bg-violet-200">
-          <h2 className="text-lg font-bold">Step 7: Explore Networking and Data Management</h2>
-          <p>Most apps need to interact with APIs, databases, or web services. Learn how to handle network requests using libraries like URLSession or Alamofire. Understand how to parse JSON data, manage network errors, and optimize API calls. Get familiar with local data storage solutions like Core Data, SQLite, or Realm.</p>
-        </div>
-
-        {/* Step 8 */}
-        <div className="p-4 border border-gray-300 rounded-md bg-white shadow-md transition-colors duration-300 ease-in-out hover:bg-violet-200">
-          <h2 className="text-lg font-bold">Step 8: Master Debugging and Testing</h2>
-          <p>Debugging and testing are essential to ensure your app runs smoothly. Learn how to use Xcode's debugging tools, like breakpoints and the LLDB debugger. Get hands-on with unit testing using XCTest and UI testing with XCUITest to ensure your app functions as expected.</p>
-        </div>
-
-        {/* Step 9 */}
-        <div className="p-4 border border-gray-300 rounded-md bg-white shadow-md transition-colors duration-300 ease-in-out hover:bg-violet-200">
-          <h2 className="text-lg font-bold">Step 9: Understand App Deployment</h2>
-          <p>Learn how to configure app settings, manage certificates, and provisioning profiles, test the app on real devices, and submit it to the App Store.</p>
-        </div>
-
-        {/* Step 10 */}
-        <div className="p-4 border border-gray-300 rounded-md bg-white shadow-md transition-colors duration-300 ease-in-out hover:bg-violet-200">
-          <h2 className="text-lg font-bold">Step 10: Build Real Projects and a Portfolio</h2>
-          <p>Start with small projects to understand the basics, and gradually move to more complex projects. Build apps with different functionalities to showcase a wide range of skills and create a strong portfolio.</p>
+        <div className="mb-8 text-lg">
+          With the knowledge and expertise you have gained, you are now ready to take on real-world projects and challenges. Happy Learning and All the Best for Your Bright Future! 🚀
         </div>
       </div>
-    </div>
+    </>
+  );
+};
 
-    <div className="text-lg mb-8">
-      With the knowledge and expertise you have gained, you are now ready to take on real-world projects and challenges. Happy Learning and All the Best for Your Bright Future! 🚀
-    </div>
-  </div>
-</>
-
-
-  )
-}
-
-export default IOSD
+export default IOSD;
