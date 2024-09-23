@@ -35,7 +35,7 @@ const CrossPD = () => {
               className={`p-4 border border-gray-300 rounded-md bg-white shadow-md transition-all duration-300 ease-in-out cursor-pointer hover:bg-violet-100`}
             >
               <FaCircleInfo
-              className="absolute w-6 h-6 bottom-3 right-3"
+              className={`absolute w-6 h-6 bottom-3 right-3 ${activeBox === framework.id ? 'z-10' : 'z-10'}`}
               onClick={() => handleBoxClick(framework.id)}
               />
               <h2 className="text-lg font-bold">{framework.title}</h2>
