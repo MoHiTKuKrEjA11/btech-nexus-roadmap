@@ -11,7 +11,7 @@ const WebD = () => {
 
   const [activeBox, setActiveBox] = useState(null); // State to track the clicked box
   const handleBoxClick = (index) => {
-    setActiveBox(activeBox=> activeBox === index ? null : index); // Toggle the clicked box
+    setActiveBox(activeBox === index ? null : index); // Toggle the clicked box
   };
 
   // Array of boxes with title, description, and resources
@@ -38,8 +38,7 @@ const WebD = () => {
               >
               <FaCircleInfo
               onClick={() => handleBoxClick(box.id)}
-              className="absolute w-6 h-6 bottom-3 right-3"
-              
+              className={`absolute w-6 h-6 bottom-3 right-3 ${activeBox === box.id ? 'z-10' : 'z-10'}`}
               />
               <h2 className="text-lg font-bold">{box.title}</h2>
 
