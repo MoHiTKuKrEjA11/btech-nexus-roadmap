@@ -12,7 +12,7 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "@/components/ui/avatar"
-
+import { FaCircleInfo } from "react-icons/fa6";
 export default function Home() {
   return (
     <div>
@@ -39,7 +39,7 @@ export default function Home() {
   <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn"/>
   <AvatarFallback className="hidden">CN</AvatarFallback>
 </Avatar>
-
+<FaCircleInfo className="w-10 h-10 " />
     </div>
   )
 }

@@ -7,17 +7,19 @@ import { Link } from 'react-router-dom';
  
 function DeveloperDetail() {
   const { name2 } = useParams();
+  let str = name2;
+  let noSpaces = str.replace(/\s+/g, '');
 
   const DevDetails = {
-    Core_Field : <CoreD/>,
-    Interdisciplinary_Options: <IOD/>,
-    Programming_and_Data_Analysis: <PADD/>,
+    CoreField : <CoreD/>,
+    InterdisciplinaryOptions: <IOD/>,
+    ProgrammingandDataAnalysis: <PADD/>,
   };
 
   return (
     <div>
-      <div className="text-xl mb-6 font-bold">{name2}</div>
-      <p>{DevDetails[name2]}</p>
+      <div className="mb-6 text-xl font-bold">{noSpaces}</div>
+      <p>{DevDetails[noSpaces]}</p>
     </div>
   );
 }

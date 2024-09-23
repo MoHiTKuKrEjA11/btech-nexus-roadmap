@@ -1,112 +1,71 @@
-import React from 'react'
+import React, { useState } from 'react';
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/ui/avatar";
+import Alldata from '../AllData/Alldata';
+import { FaCircleInfo } from 'react-icons/fa6';
 
 const PADD = () => {
+  const [activeBox, setActiveBox] = useState(null);
+  
+  const handleBoxClick = (index) => {
+    setActiveBox(activeBox === index ? null : index);
+  };
+  // Define the content as arrays
+  const {sections1}=Alldata();
+
   return (
-    <>
     <div className="p-6 space-y-6">
       {/* Introduction */}
-      <div className="text-xl mb-6">
+      <div className="mb-6 text-xl">
         This field focuses on leveraging programming skills and computational tools to solve complex engineering problems, automate calculations, analyze data, and design smart, connected systems. As mechanical engineering increasingly intersects with digital technology, skills in programming, data analysis, and IoT (Internet of Things) are becoming vital.
         <br />
         <br />
         <span className="font-semibold">Key Areas to Learn:</span>
       </div>
-  
-      {/* MATLAB or Python Section */}
-      <div className="bg-gray-100 p-6 rounded-lg shadow-lg hover:bg-violet-100 transition-colors duration-300 cursor-pointer space-y-4">
-        <h2 className="text-xl font-semibold mb-4">1. MATLAB or Python:</h2>
-        <p>
-          Both MATLAB and Python are powerful tools for computational tasks in engineering. They are used for mathematical modeling, data analysis, simulation, and automating repetitive engineering calculations.
-        </p>
-  
-        {/* MATLAB Subsection */}
-        <div>
-          <h3 className="text-lg font-semibold mb-2">i- MATLAB:</h3>
-          <p>
-            A high-level programming language widely used in engineering for numerical computing and data visualization. Learn to use built-in functions and toolboxes for tasks such as linear algebra, differential equations, signal processing, and optimization.
-            Focus on Simulink for modeling, simulating, and analyzing dynamic systems (e.g., mechanical, electrical, and hydraulic systems).
-            Study how to develop custom scripts and functions to solve specific engineering problems, automate workflows, and analyze large datasets.
-          </p>
-        </div>
-  
-        {/* Python Subsection */}
-        <div>
-          <h3 className="text-lg font-semibold mb-2">ii- Python:</h3>
-          <p>
-            An open-source programming language that's versatile, easy to learn, and widely used for data analysis, automation, and machine learning. Learn popular libraries such as NumPy (for numerical computations), Pandas (for data manipulation), SciPy (for scientific computing), and Matplotlib/Seaborn (for data visualization).
-            Use Python for automating engineering calculations, processing data from sensors, and developing custom software tools or applications.
-            Understand how to integrate Python with engineering software and tools, such as CAD or simulation platforms.
-          </p>
-        </div>
+
+      {/* Mapping over the sections */}
+      <div className="grid grid-cols-1 gap-8 cursor-pointer sm:grid-cols-2 md:grid-cols-1">
+        {sections1.map((path) => (
+          <div
+            key={path.id}
+            className={`p-4 border border-gray-300 rounded-md bg-white shadow-md transition-all duration-300 ease-in-out cursor-pointer hover:bg-violet-100`}
+          >
+            <FaCircleInfo
+              className="absolute w-6 h-6 bottom-3 right-3"
+              onClick={() => handleBoxClick(path.id)}
+              />
+            <h2 className="text-lg font-bold">{path.title}</h2>
+
+            {/* Avatar for image */}
+            <Avatar className={`items-center justify-center m-auto w-[100px] h-[100px] transition-all duration-300 ease-in-out ${activeBox === path.id ? 'max-h-0 opacity-0' : 'max-h-screen opacity-100'}`}>
+              <AvatarImage src={path.imgSrc} alt={path.title} />
+              <AvatarFallback>CE</AvatarFallback>
+            </Avatar>
+
+            {/* Additional content revealed when box is clicked */}
+            <div className={`transition-all duration-300 ease-in-out ${activeBox === path.id ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
+              {activeBox === path.id && (
+                <div>
+                  <h2>{path.content}</h2>
+                  <div className="mt-2 ml-5 ">
+                    {path.subsections.map((item, index) => (
+                      <div key={index}>
+                        <h2>{item.title}</h2>
+                        <p>{item.content}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
       </div>
-  
-      {/* IoT Section */}
-      <div className="bg-gray-100 p-6 rounded-lg shadow-lg hover:bg-violet-100 transition-colors duration-300 cursor-pointer space-y-4">
-        <h2 className="text-xl font-semibold mb-4">2. IoT (Internet of Things): (Optional Field)</h2>
-        <p>
-          The Internet of Things (IoT) involves connecting mechanical systems and devices to the internet or local networks, allowing them to communicate, collect data, and be controlled remotely. IoT skills are crucial for creating smart devices and automation solutions in various fields like smart manufacturing, predictive maintenance, and intelligent product design.
-        </p>
-  
-        {/* IoT Key Concepts Subsection */}
-        <div>
-          <h3 className="text-lg font-semibold mb-2">Key Concepts:</h3>
-  
-          {/* IoT Basics Subsection */}
-          <div>
-            <h4 className="font-semibold mb-2">1: IoT Basics:</h4>
-            <p>
-              Understand the fundamental concepts of IoT, such as sensor networks, data communication, cloud computing, and edge computing. Learn how IoT integrates with mechanical systems to enable real-time monitoring, data collection, and remote control.
-            </p>
-          </div>
-  
-          {/* Communication Protocols Subsection */}
-          <div>
-            <h4 className="font-semibold mb-2">2: Communication Protocols:</h4>
-            <p>
-              Learn about common communication protocols like MQTT (Message Queuing Telemetry Transport), HTTP (Hypertext Transfer Protocol), and CoAP (Constrained Application Protocol) used for data transmission between IoT devices and servers.
-            </p>
-          </div>
-  
-          {/* Microcontrollers and Development Platforms Subsection */}
-          <div>
-            <h4 className="font-semibold mb-2">3: Microcontrollers and Development Platforms:</h4>
-            <p>
-              Gain experience with microcontrollers like Arduino and Raspberry Pi:
-              <br />
-              <span className="font-semibold">Arduino:</span> Focus on learning how to program microcontrollers to interact with sensors, actuators, and other electronic components.
-              <br />
-              <span className="font-semibold">Raspberry Pi:</span> Understand how to use this small, affordable computer to run more complex programs and interfaces (like Python) for IoT applications.
-              <br />
-              Learn how to build basic IoT projects, such as temperature monitoring systems, smart lighting, or automated control systems.
-            </p>
-          </div>
-  
-          {/* Sensor Integration Subsection */}
-          <div>
-            <h4 className="font-semibold mb-2">4: Sensor Integration:</h4>
-            <p>
-              Study different types of sensors (e.g., temperature, humidity, pressure, motion) and how to integrate them with mechanical systems to collect real-time data.
-            </p>
-          </div>
-  
-          {/* Data Processing and Analysis Subsection */}
-          <div>
-            <h4 className="font-semibold mb-2">5: Data Processing and Analysis:</h4>
-            <p>
-              Learn to process and analyze the data collected from IoT devices using tools like MATLAB or Python. Understand how to use cloud platforms (e.g., AWS IoT, Azure IoT Hub) for data storage, processing, and real-time analytics.
-            </p>
-          </div>
-  
-          {/* Cybersecurity in IoT Subsection */}
-          <div>
-            <h4 className="font-semibold mb-2">6: Cybersecurity in IoT:</h4>
-            <p>
-              Understand the security challenges associated with IoT, including data encryption, authentication, and secure communication.
-            </p>
-          </div>
-        </div>
-      </div>
-  
+
+
       {/* Conclusion */}
       <div className="mt-6">
         <p>
@@ -114,9 +73,7 @@ const PADD = () => {
         </p>
       </div>
     </div>
-  </>
-  
-  )
+  );
 }
 
-export default PADD
+export default PADD;

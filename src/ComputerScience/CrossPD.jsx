@@ -4,7 +4,8 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "@/components/ui/avatar"
-
+import allData from './../AllData/Alldata';
+import { FaCircleInfo } from 'react-icons/fa6';
 const CrossPD = () => {
   const [activeBox, setActiveBox] = useState(null); // State to track the clicked box
 
@@ -13,32 +14,7 @@ const CrossPD = () => {
   };
 
   // Array of frameworks for Cross-Platform Development
-  const frameworks = [
-    {
-      id: 1,
-      title: 'React Native',
-      imgSrc: "https://github.com/shadcn.png",
-      description: `React Native, developed by Facebook, allows you to build mobile apps using JavaScript and React. It provides a set of components for building the UI and enables developers to use a single codebase for both Android and iOS apps.`,
-    },
-    {
-      id: 2,
-      title: 'Flutter',
-      imgSrc: "https://github.com/shadcn.png",
-      description: `Flutter, developed by Google, is an open-source UI software development kit that allows developers to create high-performance, natively compiled applications for mobile, web, and desktop from a single codebase. It uses the Dart programming language.`,
-    },
-    {
-      id: 3,
-      title: 'Kotlin Multiplatform',
-      imgSrc: "https://github.com/shadcn.png",
-      description: `Kotlin Multiplatform, created by JetBrains, enables developers to share code between multiple platforms, including Android, iOS, web, and desktop applications. It allows you to write platform-specific code only when necessary, leveraging shared logic for most of the app.`,
-    },
-    {
-      id: 4,
-      title: '.NET MAUI',
-      imgSrc: "https://github.com/shadcn.png",
-      description: `.NET MAUI is a cross-platform framework developed by Microsoft that allows developers to create native apps for Android, iOS, macOS, and Windows with a single codebase using C#. It is an evolution of Xamarin.Forms and offers enhanced performance and flexibility.`,
-    },
-  ];
+ const {frameworks}=allData();
 
   return (
     <>
@@ -56,9 +32,12 @@ const CrossPD = () => {
           {frameworks.map((framework) => (
             <div
               key={framework.id}
-              onClick={() => handleBoxClick(framework.id)}
               className={`p-4 border border-gray-300 rounded-md bg-white shadow-md transition-all duration-300 ease-in-out cursor-pointer hover:bg-violet-100`}
             >
+              <FaCircleInfo
+              className="absolute w-6 h-6 bottom-3 right-3"
+              onClick={() => handleBoxClick(framework.id)}
+              />
               <h2 className="text-lg font-bold">{framework.title}</h2>
 
               {/* Image always visible */}

@@ -10,20 +10,22 @@ import Dev from './Dev';
  
 function DeveloperDetail() {
   const { name1 } = useParams();
+  let str = name1;
+  let noSpaces = str.replace(/\s+/g, '');
 
   const DevDetails = {
-    Web_Developer : <WebD/>,
-    Android_Developer: <AndD/>,
-    ioS_Developer: <IOSD/>,
-    Cross_Platform_Development: <CrossPD/>,
-    BlockChain_Developer:<BD/>,
+    WebDeveloper : <WebD/>,
+    AndroidDeveloper: <AndD/>,
+    ioSDeveloper: <IOSD/>,
+    CrossPlatformDevelopment: <CrossPD/>,
+    BlockChainDeveloper:<BD/>,
     DevOps: <Dev/>,
   };
 
   return (
     <div>
-      <div className="text-3xl font-bold mb-4">{name1}</div>
-      <p>{DevDetails[name1]}</p>
+      <div className="mb-4 text-3xl font-bold">{noSpaces}</div>
+      <p>{DevDetails[noSpaces]}</p>
     </div>
   );
 }

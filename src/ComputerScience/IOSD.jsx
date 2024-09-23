@@ -4,6 +4,8 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "@/components/ui/avatar"
+import allData from './../AllData/Alldata';
+import { FaCircleInfo } from 'react-icons/fa6';
 const IOSD = () => {
   const [activeBox, setActiveBox] = useState(null); // State to track the clicked box
 
@@ -12,84 +14,7 @@ const IOSD = () => {
   };
 
   // Array of steps for iOS Development
-  const steps = [
-    {
-      id: 1,
-      title: 'Step 1: Choose an IDE',
-      imgSrc: "https://github.com/shadcn.png",
-      description: `Choose an IDE for building applications that combines common developer tools into a single graphical user interface (GUI).`,
-      resources: [
-        'Xcode (More Preferable)',
-        'Code Runner 2',
-        'Atom',
-        'AppCode',
-        'Visual Studio',
-      ],
-    },
-    {
-      id: 2,
-      title: 'Step 2: Choose a Programming Language',
-      imgSrc: "https://github.com/shadcn.png",
-      description: `Select one of the following programming languages to start developing iOS applications.`,
-      resources: ['Swift (More Preferable)', 'Objective-C'],
-    },
-    {
-      id: 3,
-      title: 'Step 3: Learn a UI Framework',
-      imgSrc: "https://github.com/shadcn.png",
-      description: `A user interface (UI) framework is essential for designing the visual elements of your app.`,
-      resources: ['SwiftUI (More Preferable)', 'UIKit', 'Storyboards'],
-    },
-    {
-      id: 4,
-      title: 'Step 4: Understand Design Patterns',
-      imgSrc: "https://github.com/shadcn.png",
-      description: `Learn design patterns to make changes easier to implement and maintain.`,
-      resources: ['MVC (Model-View-Controller) (More Preferable)', 'MVVM', 'VIPER'],
-    },
-    {
-      id: 5,
-      title: 'Step 5: Learn Git and GitHub',
-      imgSrc: "https://github.com/shadcn.png",
-      description: `Understanding version control is crucial for collaborating with other developers and managing your codebase effectively.`,
-      resources: ['Track changes in your code', 'GitHub, GitLab, Bitbucket'],
-    },
-    {
-      id: 6,
-      title: 'Step 6: Learn About iOS App Architecture',
-      imgSrc: "https://github.com/shadcn.png",
-      description: `App architecture defines how different parts of the app interact, manage data, handle user input, and communicate with external services.`,
-      resources: ['MVC', 'MVVM', 'VIPER'],
-    },
-    {
-      id: 7,
-      title: 'Step 7: Explore Networking and Data Management',
-      imgSrc: "https://github.com/shadcn.png",
-      description: `Learn how to handle network requests using libraries like URLSession or Alamofire.`,
-      resources: ['Core Data', 'SQLite', 'Realm'],
-    },
-    {
-      id: 8,
-      title: 'Step 8: Master Debugging and Testing',
-      imgSrc: "https://github.com/shadcn.png",
-      description: `Learn how to use Xcode's debugging tools and get hands-on with unit testing using XCTest and UI testing with XCUITest.`,
-      resources: [],
-    },
-    {
-      id: 9,
-      title: 'Step 9: Understand App Deployment',
-      imgSrc: "https://github.com/shadcn.png",
-      description: `Learn how to configure app settings, manage certificates, and submit it to the App Store.`,
-      resources: [],
-    },
-    {
-      id: 10,
-      title: 'Step 10: Build Real Projects and a Portfolio',
-      imgSrc: "https://github.com/shadcn.png",
-      description: `Start with small projects to understand the basics, and gradually move to more complex projects.`,
-      resources: [],
-    },
-  ];
+  const {steps}=allData();
 
   return (
     <>
@@ -107,9 +32,12 @@ const IOSD = () => {
           {steps.map((step) => (
             <div
               key={step.id}
-              onClick={() => handleBoxClick(step.id)}
               className={`p-4 border border-gray-300 rounded-md bg-white shadow-md transition-all duration-300 ease-in-out cursor-pointer hover:bg-violet-100`}
             >
+              <FaCircleInfo 
+              className="absolute w-6 h-6 bottom-3 right-3"
+              onClick={() => handleBoxClick(step.id)}
+              />
               <h2 className="text-lg font-bold">{step.title}</h2>
 
               {/* Description always visible */}
