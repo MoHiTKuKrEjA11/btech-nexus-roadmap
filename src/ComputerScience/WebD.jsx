@@ -38,13 +38,13 @@ const WebD = () => {
               >
               <FaCircleInfo
               onClick={() => handleBoxClick(box.id)}
-              className={`absolute w-6 h-6 bottom-3 right-3 ${activeBox === box.id ? 'z-10' : 'z-10'}`}
+              className={`absolute w-6 h-6 bottom-3 right-3 ${activeBox === box.id ? 'z-10' : ''}`}
               />
               <h2 className="text-lg font-bold">{box.title}</h2>
 
               {/* Description transition */}
               <Avatar className={` items-center justify-center m-auto w-[100px] h-[100px] transition-all duration-300 ease-in-out ${activeBox === box.id ? 'max-h-0 opacity-0' : 'max-h-screen opacity-100'}`}>
-                <AvatarImage src={box.imgSrc} alt="@shadcn" />
+                <AvatarImage src={box.imgSrc} alt="@shadcn" className="w-[80%] h-[80%]  flex justify-center align-middle"/>
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
 
@@ -87,7 +87,7 @@ const WebD = () => {
               className={`box p-4 transition-all duration-300 ease-in-out hover:bg-violet-100  bg-white border border-gray-300 rounded-md shadow-md cursor-pointer overflow-hidden ${activeBox === box.id ? 'active' : ''}`}
             >
               <FaCircleInfo 
-              className="absolute w-6 h-6 bottom-3 right-3"
+              className={`absolute w-6 h-6 bottom-3 right-3 ${activeBox === box.id ? 'z-10' : 'z-10'}`}
               onClick={() => handleBoxClick(box.id)}
               />
               <h2 className="text-lg font-bold">{box.title}</h2>

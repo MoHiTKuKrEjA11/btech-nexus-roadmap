@@ -7,6 +7,7 @@ import CrossPD from './CrossPD';
 import { Link } from 'react-router-dom';
 import BD from './BD';
 import Dev from './Dev';
+import DSA from './DSA';
  
 function DeveloperDetail() {
   const { name1 } = useParams();
@@ -20,11 +21,12 @@ function DeveloperDetail() {
     CrossPlatformDevelopment: <CrossPD/>,
     BlockChainDeveloper:<BD/>,
     DevOps: <Dev/>,
+    DSA:<DSA/>
   };
 
   return (
     <div>
-      <div className="mb-4 text-3xl font-bold">{noSpaces}</div>
+      <div className="px-6 mb-4 text-3xl font-bold">{noSpaces}</div>
       <p>{DevDetails[noSpaces]}</p>
     </div>
   );

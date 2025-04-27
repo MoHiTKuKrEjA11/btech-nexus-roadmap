@@ -49,17 +49,25 @@ const BD = () => {
               <div className={`transition-all duration-300 ease-in-out ${activeBox === step.id ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
                 {activeBox === step.id && (
                   <div>
-                    <p>{step.description}</p>
-                    {step.resources.length > 0 && (
-                      <ul className="mt-2 ml-5 list-disc">
-                        {step.resources.map((resource, index) => (
-                          <li key={index} className="text-gray-600">
-                            {resource}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
+                  <p>{step.description}</p>
+                  {step.resources.length > 0 && (
+                    <ul className="mt-2">
+                      {step.resources.map((resource, index) => (
+                        <li key={index} className="text-gray-600">
+                          <a
+                            href={resource.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-500 hover:underline"
+                          >
+                            {resource.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+                
                 )}
               </div>
             </div>

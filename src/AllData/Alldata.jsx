@@ -1,474 +1,500 @@
 import React from 'react'
 
 const Alldata = () => {
-    const boxes1 = [
-        {
-          id: 1,
-          title: 'Step 1: Learn HTML',
-          imgSrc: "https://github.com/shadcn.png",
-          description:
+  const boxes1 = [
+    {
+        id: 1,
+        title: 'Step 1: Learn HTML',
+        imgSrc: "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg", // HTML logo
+        description:
             'HTML (Hypertext Markup Language) is used to create the structure of web pages. It is the basic building block for designing a web page. Learn about elements, tags, attributes, and semantic HTML.',
-          resources: [
+        resources: [
             {
-              label: 'MDN Web Docs - HTML',
-              link: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+                label: 'MDN Web Docs - HTML',
+                link: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
             },
             {
-              label: 'W3Schools - HTML Tutorial',
-              link: 'https://www.w3schools.com/html/',
+                label: 'W3Schools - HTML Tutorial',
+                link: 'https://www.w3schools.com/html/',
             },
             {
-              label: 'freeCodeCamp - Basic HTML and HTML5',
-              link: 'https://www.freecodecamp.org/learn/responsive-web-design/#basic-html-and-html5',
+                label: 'freeCodeCamp - Basic HTML and HTML5',
+                link: 'https://www.freecodecamp.org/learn/responsive-web-design/#basic-html-and-html5',
             },
-          ],
-        },
-        {
-          id: 2,
-          title: 'Step 2: Learn CSS',
-          imgSrc: "https://github.com/shadcn.png",
-          description:
+        ],
+    },
+    {
+        id: 2,
+        title: 'Step 2: Learn CSS',
+        imgSrc: "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg", // CSS logo
+        description:
             'CSS (Cascading Style Sheets) is used to style your web page to make it visually appealing and provide a good User Experience (UX). Learn about selectors, box model, flexbox, grid, responsive design, and animations.',
-          resources: [
+        resources: [
             {
-              label: 'MDN Web Docs - CSS',
-              link: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+                label: 'MDN Web Docs - CSS',
+                link: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
             },
             {
-              label: 'W3Schools - CSS Tutorial',
-              link: 'https://www.w3schools.com/css/',
+                label: 'W3Schools - CSS Tutorial',
+                link: 'https://www.w3schools.com/css/',
             },
-          ],
-        },
-        {
-          id: 3,
-          title: 'Step 3: Learn JavaScript',
-          imgSrc: "https://github.com/shadcn.png",
-          description:
+        ],
+    },
+    {
+        id: 3,
+        title: 'Step 3: Learn JavaScript',
+        imgSrc: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png", // JavaScript logo
+        description:
             'JavaScript is essential for adding interactivity to web pages. Learn basic programming concepts such as variables, data types, functions, loops, and conditional statements. Also, explore DOM manipulation, events, and modern ES6+ features like arrow functions, classes, and modules.',
-          resources: [
+        resources: [
             {
-              label: 'MDN Web Docs - JavaScript',
-              link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+                label: 'MDN Web Docs - JavaScript',
+                link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
             },
             {
-              label: 'JavaScript.info',
-              link: 'https://javascript.info/',
+                label: 'JavaScript.info',
+                link: 'https://javascript.info/',
             },
-          ],
-        },
-        {
-          id: 4,
-          title: 'Step 4: Learn a JavaScript Framework or Library',
-          imgSrc: "https://github.com/shadcn.png",
-          description:
+        ],
+    },
+    {
+        id: 4,
+        title: 'Step 4: Learn a JavaScript Framework or Library',
+        imgSrc: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg", // React logo
+        description:
             'JavaScript frameworks and libraries make development more efficient and scalable. Choose one to specialize in:<br />1. React.js - A popular library for building user interfaces.<br />2. Angular.js - A robust framework for building dynamic web applications.',
-          resources: [
+        resources: [
             {
-              label: 'React Documentation',
-              link: 'https://reactjs.org/docs/getting-started.html',
+                label: 'React Documentation',
+                link: 'https://reactjs.org/docs/getting-started.html',
             },
             {
-              label: 'Angular Documentation',
-              link: 'https://angular.io/docs',
+                label: 'Angular Documentation',
+                link: 'https://angular.io/docs',
             },
-          ],
-        },
-        {
-          id: 5,
-          title: 'Step 5: Learn Version Control with Git and GitHub',
-          imgSrc: "https://github.com/shadcn.png",
-          description:
+        ],
+    },
+    {
+        id: 5,
+        title: 'Step 5: Learn Version Control with Git and GitHub',
+        imgSrc: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg", // Git logo
+        description:
             'Understand version control to manage and track changes in your code. Learn basic Git commands like init, clone, commit, push, pull, and branch. Use platforms like GitHub, GitLab, or Bitbucket for collaboration and code management.',
-          resources: [
+        resources: [
             {
-              label: 'Git Documentation',
-              link: 'https://git-scm.com/doc',
+                label: 'Git Documentation',
+                link: 'https://git-scm.com/doc',
             },
             {
-              label: 'GitHub Guides',
-              link: 'https://guides.github.com/',
+                label: 'GitHub Guides',
+                link: 'https://guides.github.com/',
             },
-          ],
-        },
-        {
-          id: 6,
-          title: 'Step 6: Explore Additional Tools and Technologies',
-          imgSrc: "https://github.com/shadcn.png",
-          description:
+        ],
+    },
+    {
+        id: 6,
+        title: 'Step 6: Explore Additional Tools and Technologies',
+        imgSrc: "https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg", // Sass logo
+        description:
             'Learn about CSS preprocessors (like Sass or Less), build tools (like Webpack or Parcel), and package managers (like npm or Yarn). Familiarize yourself with browser developer tools for debugging and testing.',
-          resources: [
+        resources: [
             {
-              label: 'Sass Documentation',
-              link: 'https://sass-lang.com/documentation',
+                label: 'Sass Documentation',
+                link: 'https://sass-lang.com/documentation',
             },
             {
-              label: 'Webpack Documentation',
-              link: 'https://webpack.js.org/concepts/',
+                label: 'Webpack Documentation',
+                link: 'https://webpack.js.org/concepts/',
             },
             {
-              label: 'npm Documentation',
-              link: 'https://docs.npmjs.com/',
+                label: 'npm Documentation',
+                link: 'https://docs.npmjs.com/',
             },
-          ],
-        },
-      ];
-    const boxes2=[
-        {
-            id: 7,
-            title: 'Step 7: Understand How the Web Works',
-            imgSrc: "https://github.com/shadcn.png",
-            description:
-              'Learn about servers, clients, and HTTP/HTTPS protocols, as well as how the internet functions. Understand concepts like DNS, domain names, and web hosting. Explore RESTful services and API architecture.',
-            resources: [
-              {
-                label: 'HTTP Basics',
-                link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview',
-              },
-              {
-                label: 'RESTful Web Services',
-                link: 'https://restfulapi.net/',
-              },
-            ],
-          },
-          {
-            id: 8,
-            title: 'Step 8: Choose a Backend Programming Language',
-            imgSrc: "https://github.com/shadcn.png",
-            description:
-              'Select a language that aligns with your goals and interests:<br />- JavaScript/Node.js: Ideal for full-stack development with frameworks like Express.js.<br />- Python: Known for Django and Flask frameworks, suitable for rapid development and data-driven applications.<br />- Java: Used with Spring Boot for building large-scale, secure applications.<br />- Ruby: Known for the Ruby on Rails framework, great for startup projects.<br />- PHP: Widely used with frameworks like Laravel for web applications.<br />- C#: Commonly used with ASP.NET Core for enterprise-level applications.',
-            resources: [
-              {
-                label: 'Node.js Documentation',
-                link: 'https://nodejs.org/en/docs/',
-              },
-              {
-                label: 'Django Documentation',
-                link: 'https://docs.djangoproject.com/en/stable/',
-              },
-              {
-                label: 'Spring Boot Documentation',
-                link: 'https://spring.io/projects/spring-boot',
-              },
-              {
-                label: 'Ruby on Rails Guides',
-                link: 'https://guides.rubyonrails.org/',
-              },
-              {
-                label: 'Laravel Documentation',
-                link: 'https://laravel.com/docs',
-              },
-              {
-                label: 'ASP.NET Core Documentation',
-                link: 'https://docs.microsoft.com/en-us/aspnet/core/',
-              },
-            ],
-          },
-          {
-            id: 9,
-            title: 'Step 9: Understand Databases and Data Management',
-            imgSrc: "https://github.com/shadcn.png",
-            description:
-              'Learn about relational databases and SQL (Structured Query Language) for managing structured data in databases like MySQL, PostgreSQL, and SQLite. Explore NoSQL databases like MongoDB, Cassandra, and Redis for handling unstructured data and high-performance applications.',
-            resources: [
-              {
-                label: 'MySQL Documentation',
-                link: 'https://dev.mysql.com/doc/',
-              },
-              {
-                label: 'PostgreSQL Documentation',
-                link: 'https://www.postgresql.org/docs/',
-              },
-              {
-                label: 'MongoDB Documentation',
-                link: 'https://www.mongodb.com/docs/',
-              },
-              {
-                label: 'Redis Documentation',
-                link: 'https://redis.io/documentation',
-              },
-            ],
-          },
-          {
-            id: 10,
-            title: 'Step 10: Learn Backend Frameworks and Tools',
-            imgSrc: "https://github.com/shadcn.png",
-            description:
-              'Master popular backend frameworks and tools to create efficient and scalable applications. Learn about server management, middleware, routing, authentication, and security practices.',
-            resources: [
-              {
-                label: 'Express.js Documentation',
-                link: 'https://expressjs.com/en/starter/installing.html',
-              },
-              {
-                label: 'Flask Documentation',
-                link: 'https://flask.palletsprojects.com/en/2.0.x/',
-              },
-              {
-                label: 'Spring Boot Documentation',
-                link: 'https://spring.io/projects/spring-boot',
-              },
-              {
-                label: 'Ruby on Rails Guides',
-                link: 'https://guides.rubyonrails.org/',
-              },
-            ],
-          },
-          {
-            id: 11,
-            title: 'Step 11: Learn Deployment and DevOps Basics',
-            imgSrc: "https://github.com/shadcn.png",
-            description:
-              'Understand the basics of deploying applications on various platforms (like AWS, Heroku, or Azure). Learn about continuous integration/continuous deployment (CI/CD), containerization (using Docker), and server management.',
-            resources: [
-              {
-                label: 'AWS Documentation',
-                link: 'https://docs.aws.amazon.com/',
-              },
-              {
-                label: 'Heroku Dev Center',
-                link: 'https://devcenter.heroku.com/',
-              },
-              {
-                label: 'Docker Documentation',
-                link: 'https://docs.docker.com/',
-              },
-              {
-                label: 'CI/CD Concepts',
-                link: 'https://www.redhat.com/en/topics/devops/what-is-ci-cd',
-              },
-            ],
-          },
-        ];
-        const steps = [
-            {
-              id: 1,
-              title: 'Step 1: Choose an IDE',
-              imgSrc: "https://github.com/shadcn.png",
-              description: `Choose an IDE for building applications that combines common developer tools into a single graphical user interface (GUI).`,
-              resources: [
-                'Xcode (More Preferable)',
-                'Code Runner 2',
-                'Atom',
-                'AppCode',
-                'Visual Studio',
-              ],
-            },
-            {
-              id: 2,
-              title: 'Step 2: Choose a Programming Language',
-              imgSrc: "https://github.com/shadcn.png",
-              description: `Select one of the following programming languages to start developing iOS applications.`,
-              resources: ['Swift (More Preferable)', 'Objective-C'],
-            },
-            {
-              id: 3,
-              title: 'Step 3: Learn a UI Framework',
-              imgSrc: "https://github.com/shadcn.png",
-              description: `A user interface (UI) framework is essential for designing the visual elements of your app.`,
-              resources: ['SwiftUI (More Preferable)', 'UIKit', 'Storyboards'],
-            },
-            {
-              id: 4,
-              title: 'Step 4: Understand Design Patterns',
-              imgSrc: "https://github.com/shadcn.png",
-              description: `Learn design patterns to make changes easier to implement and maintain.`,
-              resources: ['MVC (Model-View-Controller) (More Preferable)', 'MVVM', 'VIPER'],
-            },
-            {
-              id: 5,
-              title: 'Step 5: Learn Git and GitHub',
-              imgSrc: "https://github.com/shadcn.png",
-              description: `Understanding version control is crucial for collaborating with other developers and managing your codebase effectively.`,
-              resources: ['Track changes in your code', 'GitHub, GitLab, Bitbucket'],
-            },
-            {
-              id: 6,
-              title: 'Step 6: Learn About iOS App Architecture',
-              imgSrc: "https://github.com/shadcn.png",
-              description: `App architecture defines how different parts of the app interact, manage data, handle user input, and communicate with external services.`,
-              resources: ['MVC', 'MVVM', 'VIPER'],
-            },
-            {
-              id: 7,
-              title: 'Step 7: Explore Networking and Data Management',
-              imgSrc: "https://github.com/shadcn.png",
-              description: `Learn how to handle network requests using libraries like URLSession or Alamofire.`,
-              resources: ['Core Data', 'SQLite', 'Realm'],
-            },
-            {
-              id: 8,
-              title: 'Step 8: Master Debugging and Testing',
-              imgSrc: "https://github.com/shadcn.png",
-              description: `Learn how to use Xcode's debugging tools and get hands-on with unit testing using XCTest and UI testing with XCUITest.`,
-              resources: [],
-            },
-            {
-              id: 9,
-              title: 'Step 9: Understand App Deployment',
-              imgSrc: "https://github.com/shadcn.png",
-              description: `Learn how to configure app settings, manage certificates, and submit it to the App Store.`,
-              resources: [],
-            },
-            {
-              id: 10,
-              title: 'Step 10: Build Real Projects and a Portfolio',
-              imgSrc: "https://github.com/shadcn.png",
-              description: `Start with small projects to understand the basics, and gradually move to more complex projects.`,
-              resources: [],
-            },
-          ];
-          const steps1 = [
-            {
-              id: 1,
-              title: 'Step 1: Learn the Fundamentals of Blockchain Technology',
-              imgSrc: "https://github.com/shadcn.png",
-              description: `Understand the core concepts of blockchain technology, including distributed ledger technology, cryptographic hash functions, consensus mechanisms, and smart contracts.`,
-              resources: [
-                'Distributed Ledger Technology (DLT)',
-                'Cryptographic Hash Functions (e.g., SHA-256)',
-                'Consensus Mechanisms (Proof of Work, Proof of Stake, etc.)',
-                'Smart Contracts',
-                'Decentralization, Nodes, Peer-to-Peer Networks',
-                'Types of Blockchains: Public, Private, Consortium, Hybrid',
-              ],
-            },
-            {
-              id: 2,
-              title: 'Step 2: Learn Cryptography and Security Principles',
-              imgSrc: "https://github.com/shadcn.png",
-              description: `Study cryptography and security principles essential for blockchain technology, including symmetric and asymmetric encryption, hash functions, and digital signatures.`,
-              resources: [
-                'Symmetric and Asymmetric Cryptography',
-                'Hash Functions and Digital Signatures',
-                'Public and Private Keys',
-                'Zero-Knowledge Proofs, Secure Multi-Party Computation',
-                'Blockchain Security Principles and Attack Vectors',
-              ],
-            },
-            {
-              id: 3,
-              title: 'Step 3: Choose a Blockchain Platform to Specialize In',
-              imgSrc: "https://github.com/shadcn.png",
-              description: `Select a blockchain platform to focus on based on your interests and the type of applications you want to build.`,
-              resources: [
-                'Ethereum: For decentralized applications (dApps) and smart contracts.',
-                'Solana: High-speed transactions, low fees.',
-                'Hyperledger Fabric: Enterprise-level private blockchain solutions.',
-                'Polkadot: Focuses on interoperability between blockchains.',
-                'Tezos: Self-amending blockchain network, formal verification.',
-                'Binance Smart Chain (BSC): DeFi applications and dApps.',
-              ],
-            },
-            {
-              id: 4,
-              title: 'Step 4: Learn a Smart Contract Programming Language',
-              imgSrc: "https://github.com/shadcn.png",
-              description: `Get proficient in programming languages used for writing smart contracts on various blockchain platforms.`,
-              resources: [
-                'Solidity (Mandatory): For Ethereum and compatible blockchains.',
-                'Vyper (Optional): Focuses on simplicity and security for Ethereum.',
-                'Rust (Optional): Used for smart contracts on Solana.',
-                'C++ (Optional): Used for EOS blockchain development.',
-              ],
-            },
-            {
-              id: 5,
-              title: 'Step 5: Learn Blockchain Development Tools and Frameworks',
-              imgSrc: "https://github.com/shadcn.png",
-              description: `Familiarize yourself with development tools and frameworks that help in building and deploying blockchain applications.`,
-              resources: [
-                'Truffle: Development framework for Ethereum.',
-                'Hardhat: Compiling, deploying, testing, and debugging Ethereum software.',
-                'Remix IDE: In-browser IDE for Solidity smart contracts.',
-                'Ganache: Personal blockchain for Ethereum development.',
-                'MetaMask: Browser extension wallet for dApps.',
-                'Infura: Connects to Ethereum networks without a full node.',
-              ],
-            },
-            {
-              id: 6,
-              title: 'Step 6: Understand Decentralized Applications (dApps) and Front-End Integration',
-              imgSrc: "https://github.com/shadcn.png",
-              description: `Learn about the architecture of dApps and how to integrate them with front-end applications.`,
-              resources: [
-                'dApp architecture and how they work.',
-                'Connect smart contracts with front-end applications using Web3.js or Ethers.js.',
-                'Develop web development skills (HTML, CSS, JavaScript) and frameworks like React.js.',
-              ],
-            },
-            {
-              id: 7,
-              title: 'Step 7: Learn Blockchain APIs and SDKs',
-              imgSrc: "https://github.com/shadcn.png",
-              description: `Explore APIs and SDKs that allow interaction with blockchain networks and services.`,
-              resources: [
-                'Web3.js: Libraries for Ethereum node interaction.',
-                'Ethers.js: Interact with the Ethereum blockchain and ecosystem.',
-                'Blockchain.com APIs: APIs for building on the Blockchain.com platform.',
-              ],
-            },
-            {
-              id: 8,
-              title: 'Step 8: Learn About Decentralized Finance (DeFi)',
-              imgSrc: "https://github.com/shadcn.png",
-              description: `Understand the concepts and protocols behind DeFi and how to interact with DeFi platforms.`,
-              resources: [
-                'Understand the core concepts and protocols in DeFi:',
-                'Liquidity pools, yield farming, staking, decentralized exchanges (DEX).',
-                'Study DeFi protocols like Uniswap, Aave, Compound, Sushiswap.',
-                'Learn about security risks and precautions in DeFi.',
-              ],
-            },
-            {
-              id: 9,
-              title: 'Step 9: Master Blockchain Testing and Security Best Practices',
-              imgSrc: "https://github.com/shadcn.png",
-              description: `Learn how to test and secure your blockchain applications to ensure robustness and safety.`,
-              resources: [
-                'Perform unit testing and integration testing for smart contracts.',
-                'Use security analysis tools like MythX, Slither, Manticore.',
-                'Learn common vulnerabilities (e.g., reentrancy attacks, overflow/underflow attacks) and prevention techniques.',
-              ],
-            },
-            {
-              id: 10,
-              title: 'Step 10: Learn About Consensus Algorithms and Protocols',
-              imgSrc: "https://github.com/shadcn.png",
-              description: `Understand various consensus algorithms and protocols used in blockchain networks.`,
-              resources: [
-                'Proof of Work (PoW): Used by Bitcoin, Ethereum 1.0.',
-                'Proof of Stake (PoS): Used by Ethereum 2.0, Cardano.',
-                'Delegated Proof of Stake (DPoS): Used by EOS, Tron.',
-                'Practical Byzantine Fault Tolerance (PBFT): Used by Hyperledger Fabric.',
-                'Proof of Authority (PoA): Used in private or consortium blockchains.',
-              ],
-            },
-            {
-              id: 11,
-              title: 'Step 11: Get Hands-On with Blockchain Development Projects',
-              imgSrc: "https://github.com/shadcn.png",
-              description: `Apply your skills by working on real blockchain projects and contributing to open-source initiatives.`,
-              resources: [
-                'Create and deploy your own cryptocurrency or token.',
-                'Develop simple decentralized applications (dApps).',
-                'Contribute to open-source blockchain projects.',
-                'Participate in hackathons and collaborate on innovative solutions.',
-              ],
-            },
-            {
-              id: 12,
-              title: 'Step 12: Explore Advanced Topics and Stay Updated',
-              imgSrc: "https://github.com/shadcn.png",
-              description: `Stay informed about the latest advancements in blockchain technology and explore advanced topics.`,
-              resources: [
-                'Layer 2 solutions, sidechains, state channels.',
-                'Cross-chain interoperability and connecting multiple blockchains.',
-                'Stay updated on emerging trends: NFTs, DAOs, Web 3.0, metaverse.',
-                'Join developer communities and forums like StackOverflow, Reddit, and follow blockchain blogs.',
-              ],
-            },
-          ];
+        ],
+    },
+];
+
+const boxes2 = [
+  {
+    id: 7,
+    title: 'Step 7: Understand How the Web Works',
+    imgSrc: "data:image/png;base64,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", // HTTP logo
+    description:
+      'Learn about servers, clients, and HTTP/HTTPS protocols, as well as how the internet functions. Understand concepts like DNS, domain names, and web hosting. Explore RESTful services and API architecture.',
+    resources: [
+      {
+        label: 'HTTP Basics',
+        link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview',
+      },
+      {
+        label: 'RESTful Web Services',
+        link: 'https://restfulapi.net/',
+      },
+    ],
+  },
+  {
+    id: 8,
+    title: 'Step 8: Choose a Backend Programming Language',
+    imgSrc: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg", // Node.js logo
+    description:
+      'Select a language that aligns with your goals and interests:<br />- JavaScript/Node.js: Ideal for full-stack development with frameworks like Express.js.<br />- Python: Known for Django and Flask frameworks, suitable for rapid development and data-driven applications.<br />- Java: Used with Spring Boot for building large-scale, secure applications.<br />- Ruby: Known for the Ruby on Rails framework, great for startup projects.<br />- PHP: Widely used with frameworks like Laravel for web applications.<br />- C#: Commonly used with ASP.NET Core for enterprise-level applications.',
+    resources: [
+      {
+        label: 'Node.js Documentation',
+        link: 'https://nodejs.org/en/docs/',
+      },
+      {
+        label: 'Django Documentation',
+        link: 'https://docs.djangoproject.com/en/stable/',
+      },
+      {
+        label: 'Spring Boot Documentation',
+        link: 'https://spring.io/projects/spring-boot',
+      },
+      {
+        label: 'Ruby on Rails Guides',
+        link: 'https://guides.rubyonrails.org/',
+      },
+      {
+        label: 'Laravel Documentation',
+        link: 'https://laravel.com/docs',
+      },
+      {
+        label: 'ASP.NET Core Documentation',
+        link: 'https://docs.microsoft.com/en-us/aspnet/core/',
+      },
+    ],
+  },
+  {
+    id: 9,
+    title: 'Step 9: Understand Databases and Data Management',
+    imgSrc: "https://thumbs.dreamstime.com/b/database-icon-logo-modern-line-style-high-quality-black-outline-pictogram-web-site-design-mobile-apps-vector-81369618.jpg", // MySQL logo
+    description:
+      'Learn about relational databases and SQL (Structured Query Language) for managing structured data in databases like MySQL, PostgreSQL, and SQLite. Explore NoSQL databases like MongoDB, Cassandra, and Redis for handling unstructured data and high-performance applications.',
+    resources: [
+      {
+        label: 'MySQL Documentation',
+        link: 'https://dev.mysql.com/doc/',
+      },
+      {
+        label: 'PostgreSQL Documentation',
+        link: 'https://www.postgresql.org/docs/',
+      },
+      {
+        label: 'MongoDB Documentation',
+        link: 'https://www.mongodb.com/docs/',
+      },
+      {
+        label: 'Redis Documentation',
+        link: 'https://redis.io/documentation',
+      },
+    ],
+  },
+  {
+    id: 10,
+    title: 'Step 10: Learn Backend Frameworks and Tools',
+    imgSrc: "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png", // Express.js logo
+    description:
+      'Master popular backend frameworks and tools to create efficient and scalable applications. Learn about server management, middleware, routing, authentication, and security practices.',
+    resources: [
+      {
+        label: 'Express.js Documentation',
+        link: 'https://expressjs.com/en/starter/installing.html',
+      },
+      {
+        label: 'Flask Documentation',
+        link: 'https://flask.palletsprojects.com/en/2.0.x/',
+      },
+      {
+        label: 'Spring Boot Documentation',
+        link: 'https://spring.io/projects/spring-boot',
+      },
+      {
+        label: 'Ruby on Rails Guides',
+        link: 'https://guides.rubyonrails.org/',
+      },
+    ],
+  },
+  {
+    id: 11,
+    title: 'Step 11: Learn Deployment and DevOps Basics',
+    imgSrc: "https://i.postimg.cc/W1fdyG69/download.jpg", // AWS logo
+    description:
+      'Understand the basics of deploying applications on various platforms (like AWS, Heroku, or Azure). Learn about continuous integration/continuous deployment (CI/CD), containerization (using Docker), and server management.',
+    resources: [
+      {
+        label: 'AWS Documentation',
+        link: 'https://docs.aws.amazon.com/',
+      },
+      {
+        label: 'Heroku Dev Center',
+        link: 'https://devcenter.heroku.com/',
+      },
+      {
+        label: 'Docker Documentation',
+        link: 'https://docs.docker.com/',
+      },
+      {
+        label: 'CI/CD Concepts',
+        link: 'https://www.redhat.com/en/topics/devops/what-is-ci-cd',
+      },
+    ],
+  },
+];
+
+const steps = [
+  {
+    id: 1,
+    title: 'Step 1: Choose an IDE',
+    imgSrc: "https://upload.wikimedia.org/wikipedia/commons/1/1d/Xcode_Icon.png", // Xcode icon
+    description: `Choose an IDE for building applications that combines common developer tools into a single graphical user interface (GUI).`,
+    resources: [
+      { label: 'Xcode (More Preferable)', link: 'https://developer.apple.com/xcode/' },
+      { label: 'Code Runner 2', link: 'https://coderunnerapp.com/' },
+      { label: 'Atom', link: 'https://atom.io/' },
+      { label: 'AppCode', link: 'https://www.jetbrains.com/objc/' },
+      { label: 'Visual Studio', link: 'https://visualstudio.microsoft.com/' },
+    ],
+  },
+  {
+    id: 2,
+    title: 'Step 2: Choose a Programming Language',
+    imgSrc: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Swift_logo.svg", // Swift logo
+    description: `Select one of the following programming languages to start developing iOS applications.`,
+    resources: [
+      { label: 'Swift (More Preferable)', link: 'https://swift.org/' },
+      { label: 'Objective-C', link: 'https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html' },
+    ],
+  },
+  {
+    id: 3,
+    title: 'Step 3: Learn a UI Framework',
+    imgSrc: "https://upload.wikimedia.org/wikipedia/commons/3/35/Apple_SwiftUI_logo.png", // SwiftUI logo
+    description: `A user interface (UI) framework is essential for designing the visual elements of your app.`,
+    resources: [
+      { label: 'SwiftUI (More Preferable)', link: 'https://developer.apple.com/xcode/swiftui/' },
+      { label: 'UIKit', link: 'https://developer.apple.com/documentation/uikit' },
+      { label: 'Storyboards', link: 'https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/Introduction/Introduction.html' },
+    ],
+  },
+  {
+    id: 4,
+    title: 'Step 4: Understand Design Patterns',
+    imgSrc: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Design_Patterns_Book_Cover.jpg", // Design patterns book cover
+    description: `Learn design patterns to make changes easier to implement and maintain.`,
+    resources: [
+      { label: 'MVC (Model-View-Controller) (More Preferable)', link: 'https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html' },
+      { label: 'MVVM', link: 'https://academy.realm.io/posts/marius-constantin-mvvm-design-pattern-ios-swift/' },
+      { label: 'VIPER', link: 'https://cheesecakelabs.com/blog/ios-project-architecture-using-viper/' },
+    ],
+  },
+  {
+    id: 5,
+    title: 'Step 5: Learn Git and GitHub',
+    imgSrc: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png", // Git logo
+    description: `Understanding version control is crucial for collaborating with other developers and managing your codebase effectively.`,
+    resources: [
+      { label: 'Git Basics', link: 'https://git-scm.com/doc' },
+      { label: 'GitHub', link: 'https://docs.github.com/en/get-started' },
+      { label: 'GitLab', link: 'https://docs.gitlab.com/' },
+      { label: 'Bitbucket', link: 'https://bitbucket.org/product' },
+    ],
+  },
+  {
+    id: 6,
+    title: 'Step 6: Learn About iOS App Architecture',
+    imgSrc: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Mobile-application-architecture-diagram.png", // General app architecture
+    description: `App architecture defines how different parts of the app interact, manage data, handle user input, and communicate with external services.`,
+    resources: [
+      { label: 'MVC', link: 'https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html' },
+      { label: 'MVVM', link: 'https://academy.realm.io/posts/marius-constantin-mvvm-design-pattern-ios-swift/' },
+      { label: 'VIPER', link: 'https://cheesecakelabs.com/blog/ios-project-architecture-using-viper/' },
+    ],
+  },
+  {
+    id: 7,
+    title: 'Step 7: Explore Networking and Data Management',
+    imgSrc: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Database-icon.png", // Database icon
+    description: `Learn how to handle network requests using libraries like URLSession or Alamofire.`,
+    resources: [
+      { label: 'Core Data', link: 'https://developer.apple.com/documentation/coredata' },
+      { label: 'SQLite', link: 'https://www.sqlite.org/docs.html' },
+      { label: 'Realm', link: 'https://realm.io/docs/' },
+    ],
+  },
+  {
+    id: 8,
+    title: 'Step 8: Master Debugging and Testing',
+    imgSrc: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Xcode-icon-debugging.png", // Debugging icon
+    description: `Learn how to use Xcode's debugging tools and get hands-on with unit testing using XCTest and UI testing with XCUITest.`,
+    resources: [
+      { label: 'XCTest Framework', link: 'https://developer.apple.com/documentation/xctest' },
+      { label: 'UI Testing with XCUITest', link: 'https://developer.apple.com/documentation/xcode/testing-your-app-s-ui-with-ui-tests' },
+    ],
+  },
+  {
+    id: 9,
+    title: 'Step 9: Understand App Deployment',
+    imgSrc: "https://upload.wikimedia.org/wikipedia/commons/8/8e/IOS_App_Store_Icon.png", // App Store icon
+    description: `Learn how to configure app settings, manage certificates, and submit it to the App Store.`,
+    resources: [
+      { label: 'App Store Submission Guide', link: 'https://developer.apple.com/app-store/submit/' },
+    ],
+  },
+  {
+    id: 10,
+    title: 'Step 10: Build Real Projects and a Portfolio',
+    imgSrc: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Portfolio-icon.png", // Portfolio icon
+    description: `Start with small projects to understand the basics, and gradually move to more complex projects.`,
+    resources: [
+      { label: 'Building iOS Apps', link: 'https://developer.apple.com/documentation/' },
+      { label: 'Portfolio Tips', link: 'https://www.indeed.com/career-advice/resumes-cover-letters/how-to-create-a-portfolio' },
+    ],
+  },
+];
+
+const steps1 = [
+  {
+    id: 1,
+    title: 'Step 1: Learn the Fundamentals of Blockchain Technology',
+    imgSrc: "https://www.blockchain.com/static/img/icon_blockchain_blue.svg", 
+    description: `Understand the core concepts of blockchain technology, including distributed ledger technology, cryptographic hash functions, consensus mechanisms, and smart contracts.`,
+    resources: [
+      { label: 'Introduction to Blockchain', link: 'https://www.ibm.com/topics/what-is-blockchain' },
+      { label: 'Consensus Mechanisms', link: 'https://consensys.net/knowledge-base/consensus-algorithms-explained/' },
+      { label: 'Smart Contracts Overview', link: 'https://ethereum.org/en/developers/docs/smart-contracts/' },
+      { label: 'Public vs Private Blockchains', link: 'https://www.geeksforgeeks.org/public-private-consortium-and-hybrid-blockchains/' },
+    ],
+  },
+  {
+    id: 2,
+    title: 'Step 2: Learn Cryptography and Security Principles',
+    imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Key_icon.svg/512px-Key_icon.svg.png",
+    description: `Study cryptography and security principles essential for blockchain technology, including symmetric and asymmetric encryption, hash functions, and digital signatures.`,
+    resources: [
+      { label: 'Cryptography Basics', link: 'https://cryptography.io/en/latest/' },
+      { label: 'Hash Functions Explained', link: 'https://www.cloudflare.com/learning/ssl/how-does-ssl-work/' },
+      { label: 'Digital Signatures Overview', link: 'https://www.docusign.com/blog/ds-basics-digital-signatures' },
+      { label: 'Blockchain Security', link: 'https://www.okta.com/identity-101/blockchain-security/' },
+    ],
+  },
+  {
+    id: 3,
+    title: 'Step 3: Choose a Blockchain Platform to Specialize In',
+    imgSrc: "https://ethereum.org/static/28214bb453f554a45d51aa4c272da6f1/31987/eth-diamond-purple.png", 
+    description: `Select a blockchain platform to focus on based on your interests and the type of applications you want to build.`,
+    resources: [
+      { label: 'Ethereum Documentation', link: 'https://ethereum.org/en/developers/' },
+      { label: 'Solana Developer Resources', link: 'https://solana.com/developers' },
+      { label: 'Hyperledger Fabric Docs', link: 'https://hyperledger-fabric.readthedocs.io/en/release-2.2/' },
+      { label: 'Polkadot Developer Hub', link: 'https://polkadot.network/developers/' },
+    ],
+  },
+  {
+    id: 4,
+    title: 'Step 4: Learn a Smart Contract Programming Language',
+    imgSrc: "https://soliditylang.org/static/logo-4a4d3dfc.svg",
+    description: `Get proficient in programming languages used for writing smart contracts on various blockchain platforms.`,
+    resources: [
+      { label: 'Learn Solidity', link: 'https://soliditylang.org/' },
+      { label: 'Vyper Documentation', link: 'https://vyper.readthedocs.io/en/stable/' },
+      { label: 'Rust for Solana', link: 'https://docs.solana.com/developing/on-chain-programs/developing-rust' },
+    ],
+  },
+  {
+    id: 5,
+    title: 'Step 5: Learn Blockchain Development Tools and Frameworks',
+    imgSrc: "https://trufflesuite.com/assets/images/logo.svg",
+    description: `Familiarize yourself with development tools and frameworks that help in building and deploying blockchain applications.`,
+    resources: [
+      { label: 'Truffle Suite', link: 'https://trufflesuite.com/' },
+      { label: 'Hardhat Documentation', link: 'https://hardhat.org/' },
+      { label: 'Remix IDE', link: 'https://remix.ethereum.org/' },
+      { label: 'Ganache', link: 'https://trufflesuite.com/ganache/' },
+      { label: 'MetaMask', link: 'https://metamask.io/' },
+    ],
+  },
+  {
+    id: 6,
+    title: 'Step 6: Understand Decentralized Applications (dApps) and Front-End Integration',
+    imgSrc: "https://miro.medium.com/max/1400/1*IPHPb1Aj8c_TaVHe7tOO1g.png",
+    description: `Learn about the architecture of dApps and how to integrate them with front-end applications.`,
+    resources: [
+      { label: 'What are dApps?', link: 'https://ethereum.org/en/developers/docs/dapps/' },
+      { label: 'Web3.js Documentation', link: 'https://web3js.readthedocs.io/' },
+      { label: 'Ethers.js Documentation', link: 'https://docs.ethers.io/v5/' },
+      { label: 'Learn React.js', link: 'https://reactjs.org/' },
+    ],
+  },
+  {
+    id: 7,
+    title: 'Step 7: Learn Blockchain APIs and SDKs',
+    imgSrc: "https://miro.medium.com/max/1400/1*nbQBBkNwN--95aCN5nPeqg.png",
+    description: `Explore APIs and SDKs that allow interaction with blockchain networks and services.`,
+    resources: [
+      { label: 'Web3.js Overview', link: 'https://web3js.readthedocs.io/' },
+      { label: 'Ethers.js Overview', link: 'https://docs.ethers.io/v5/' },
+      { label: 'Blockchain.com API', link: 'https://www.blockchain.com/api' },
+    ],
+  },
+  {
+    id: 8,
+    title: 'Step 8: Learn About Decentralized Finance (DeFi)',
+    imgSrc: "https://cryptoslate.com/wp-content/uploads/2020/10/defi-lending-and-borrowing.jpg",
+    description: `Understand the concepts and protocols behind DeFi and how to interact with DeFi platforms.`,
+    resources: [
+      { label: 'Introduction to DeFi', link: 'https://ethereum.org/en/defi/' },
+      { label: 'Liquidity Pools Explained', link: 'https://academy.binance.com/en/articles/what-are-liquidity-pools-in-defi' },
+      { label: 'DeFi Protocols Overview', link: 'https://defipulse.com/' },
+    ],
+  },
+  {
+    id: 9,
+    title: 'Step 9: Master Blockchain Testing and Security Best Practices',
+    imgSrc: "https://user-images.githubusercontent.com/15111785/95895290-f21fd080-0d53-11eb-9407-bb02c167a486.png",
+    description: `Learn how to test and secure your blockchain applications to ensure robustness and safety.`,
+    resources: [
+      { label: 'MythX Security Analysis', link: 'https://mythx.io/' },
+      { label: 'Slither Solidity Analysis', link: 'https://github.com/crytic/slither' },
+      { label: 'Blockchain Testing Best Practices', link: 'https://consensys.net/blog/security/how-to-test-your-smart-contracts/' },
+    ],
+  },
+  {
+    id: 10,
+    title: 'Step 10: Learn About Consensus Algorithms and Protocols',
+    imgSrc: "https://cryptopotato.com/wp-content/uploads/2022/01/Consensus_Algorighms.jpg",
+    description: `Understand various consensus algorithms and protocols used in blockchain networks.`,
+    resources: [
+      { label: 'Proof of Work (PoW)', link: 'https://www.investopedia.com/terms/p/proof-work.asp' },
+      { label: 'Proof of Stake (PoS)', link: 'https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/' },
+      { label: 'Delegated Proof of Stake (DPoS)', link: 'https://cointelegraph.com/defi-101/what-is-delegated-proof-of-stake-dpos' },
+    ],
+  },
+  {
+    id: 11,
+    title: 'Step 11: Get Hands-On with Blockchain Development Projects',
+    imgSrc: "https://miro.medium.com/max/1400/1*d7gceheQUbNVgH3yZkh9bA.png",
+    description: `Apply your skills by working on real blockchain projects and contributing to open-source initiatives.`,
+    resources: [
+      { label: 'How to Create a Cryptocurrency', link: 'https://www.makeuseof.com/how-to-create-your-own-cryptocurrency/' },
+      { label: 'Simple dApp Tutorial', link: 'https://ethereum.org/en/developers/tutorials/build-a-dapp/' },
+      { label: 'Contribute to Open-Source Blockchain', link: 'https://opensource.guide/how-to-contribute/' },
+    ],
+  },
+  {
+    id: 12,
+    title: 'Step 12: Explore Advanced Topics and Stay Updated',
+    imgSrc: "https://miro.medium.com/max/700/1*v9fHruJFoVzhg8Zo1J6WlA.jpeg",
+    description: `Stay informed about the latest advancements in blockchain technology and explore advanced topics.`,
+    resources: [
+      { label: 'Layer 2 Solutions', link: 'https://ethereum.org/en/layer-2/' },
+      { label: 'Cross-Chain Interoperability', link: 'https://www.consensys.net/blog/blockchain-explained/what-is-blockchain-interoperability/' },
+      { label: 'Learn About DAOs', link: 'https://ethereum.org/en/dao/' },
+      { label: 'Blockchain Blogs and News', link: 'https://decrypt.co/' },
+    ],
+  },
+];
+
           const steps2 = [
             {
               id: 1,
@@ -1400,9 +1426,198 @@ const Alldata = () => {
               ]
             }
           ];
+
+          const steps4 = [
+            {
+              id:1,
+              title: 'Step 1: Pick a programming language',
+              description: ['C++', 'Java', 'Python', 'JavaScript', 'Ruby'],
+            },
+            {
+              id:2,
+              title: 'Step 2: Learn the Syntax',
+              description: [
+                'Declare variables',
+                'Call functions',
+                'Use control flow statements',
+              ],
+            },
+            {
+              id:3,
+              title: 'Step 3: Learn the basics of Object-Oriented Programming (OOP)',
+              description: [
+                'OOP is a way of organizing code using “objects.” Objects are instances of classes, which define their attributes and methods. This helps you model real-world scenarios in programming.',
+              ],
+            },
+            {
+              id:4,
+              title: 'Step 4: Understand Pseudo Code',
+              description: [
+                'Pseudo code is a plain language description of the steps in an algorithm. It’s meant for people to understand, not machines. You can use it to describe how a program will work without worrying about syntax.',
+              ],
+            },
+            {
+              id:5,
+              title: 'Step 5: Learn about Data Structures',
+              description: [
+                'Data structures are ways to store and organize data efficiently, making it easier to use. They help manage large amounts of data, like in databases or search engines.',
+              ],
+            },
+            {
+              id:6,
+              title: 'Step 6: Learn about Arrays',
+              description: [
+                'Array is a data structure that stores a collection of similar elements, such as numbers or strings, under a single variable name. Arrays are useful when working with multiple values of the same data type.',
+              ],
+            },
+            {
+              id:7,
+              title: 'Step 7: Learn about Strings',
+              description: [
+                'Strings store sequences of characters, usually as arrays of bytes. They are an important data type in programming.',
+              ],
+            },
+            {
+              id:8,
+              title: 'Step 8: Learn about Linked Lists',
+              description: [
+                'Linked Lists store data in nodes, each containing a data field and a link to the next node.',
+              ],
+            },
+            {
+              id:9,
+              title: 'Step 9: Learn about Stacks',
+              description: [
+                'Stacks are data structures where you can only add or remove elements from the top. They follow LIFO (Last In First Out) order.',
+              ],
+            },
+            {
+              id:10,
+              title: 'Step 10: Learn about Queues',
+              description: [
+                'Queues are like lines: elements are added at the back and removed from the front.',
+              ],
+            },
+            {
+              id:11,
+              title: 'Step 11: Learn about Hash Tables',
+              description: [
+                'Hash Tables allow fast access to data using a key. They calculate an index where the data is stored using a hash function.',
+              ],
+            },
+            {
+              id:12,
+              title: 'Step 12: Learn about Computational Complexity',
+              description: [
+                'This involves understanding how much time and memory an algorithm needs to solve a problem.',
+              ],
+            },
+            {
+              id:13,
+              title: 'Step 13: Learn Sorting Algorithms',
+              description: [
+                'Sorting algorithms arrange data in order. Common ones include Bubble Sort, Selection Sort, Merge Sort, Quick Sort, etc.',
+              ],
+            },
+            {
+              id:14,
+              title: 'Step 14: Learn Searching Algorithms',
+              description: [
+                'Search algorithms help find items in data. Two main types are Linear Search and Binary Search.',
+              ],
+            },
+            {
+              id:15,
+              title: 'Step 15: Learn about Trees',
+              description: [
+                'A tree is a non-linear data structure with nodes connected by edges. Each node has a parent and can have multiple children.',
+              ],
+            },
+            {
+              id:16,
+              title: 'Step 16: Learn about Types of Trees',
+              description: [
+                'Binary Tree',
+                'Binary Search Tree',
+                'AVL Tree',
+                'B-Tree',
+                'm-ary Tree',
+              ],
+            },
+            {
+              id:17,
+              title: 'Step 17: Learn Tree Traversal',
+              description: [
+                'Inorder Traversal',
+                'Preorder Traversal',
+                'Postorder Traversal',
+              ],
+            },
+            {
+              id:18,
+              title: 'Step 18: Searching in Trees',
+              description: [
+                'Breadth-First Search (BFS)',
+                'Depth-First Search (DFS)',
+              ],
+            },
+            {
+              id:19,
+              title: 'Step 19: Learn about Graphs',
+              description: [
+                'A graph is a set of vertices connected by edges. There are two types: Directed Graph and Undirected Graph.',
+              ],
+            },
+            {
+              id:20,
+              title: 'Step 20: Searching in Graphs',
+              description: [
+                'Common search methods in graphs: Depth-First Search (DFS), Breadth-First Search (BFS)',
+              ],
+            },
+            {
+              id:21,
+              title: 'Step 21: Learn Graph Algorithms',
+              description: [
+                'Dijkstra’s Algorithm',
+                'Bellman-Ford',
+                'Prim’s Algorithm',
+                'Kruskal’s Algorithm',
+              ],
+            },
+            {
+              id:22,
+              title: 'Step 22: Learn Advanced Data Structures',
+              description: [
+                'Trie',
+                'Segment Trees',
+                'Fenwick Trees',
+                'Disjoint Sets',
+              ],
+            },
+            {
+              id:23,
+              title: 'Step 23: Learn Problem-Solving Techniques',
+              description: [
+                'Brute force',
+                'Greedy',
+                'Divide and Conquer',
+                'Dynamic Programming',
+                'Recursion',
+                'Backtracking',
+              ],
+            },
+            {
+              id:24,
+              title: 'Final Step',
+              description: [
+                'With the knowledge and expertise you have gained, you are now ready to practice solving problems on platforms like LeetCode, HackerRank, and CodeChef. Participate in weekly contests to improve your skills. Happy Learning and All the Best for Your Bright Future! 🚀',
+              ],
+            },
+          ];
         
   return {
-    boxes1,boxes2,steps,steps1,steps2,steps3,frameworks,careerPaths,fieldPath,designTools,thermalAreas,manufacturingAreas,sections,sections1
+    boxes1,boxes2,steps,steps1,steps2,steps3,frameworks,careerPaths,fieldPath,designTools,thermalAreas,manufacturingAreas,sections,sections1,steps4
   };
     
   

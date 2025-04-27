@@ -54,17 +54,25 @@ const IOSD = () => {
               >
                 {activeBox === step.id && (
                   <div>
-                    <p>{step.description}</p>
-                    {step.resources.length > 0 && (
-                      <ul className="mt-2">
-                        {step.resources.map((resource) => (
-                          <li key={step.id} className="text-gray-600">
-                            {resource}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
+                  <p>{step.description}</p>
+                  {step.resources.length > 0 && (
+                    <ul className="mt-2">
+                      {step.resources.map((resource, index) => (
+                        <li key={index} className="text-gray-600">
+                          <a
+                            href={resource.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-500 hover:underline"
+                          >
+                            {resource.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+                
                 )}
               </div>
             </div>

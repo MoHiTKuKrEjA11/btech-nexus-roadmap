@@ -13,7 +13,7 @@ const CS = () => {
       </div>
       
       <div className="text-lg">
-        Other than your academic knowledge, you require hands-on experience in one of the domains to build web, android, and windows applications.
+      Other than your academic knowledge, you also require hands-on experience in one of the domains to build web, Android, and Windows applications. Additionally, students need to have a strong grasp of Data Structures and Algorithms (DSA).
       </div>
   
       <div className="mb-4 text-lg">
@@ -49,6 +49,13 @@ const CS = () => {
           </h1>
         ))}
       </div>
+      <br /> <br />
+      <div className="text-xl font-semibold">Roadmap of D.S.A:</div>
+      <h1 className="text-lg">
+      <Link to='/field/CS/DSA' className="inline-block px-4 py-2 transition-colors duration-300 ease-in-out border border-gray-300 rounded-md hover:bg-violet-500 hover:text-white">
+      Data Structures and Algorithms
+      </Link>
+      </h1>
     </div>
   </>
   );
